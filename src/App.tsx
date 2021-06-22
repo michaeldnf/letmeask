@@ -1,11 +1,21 @@
-import { Button } from "./components/Button";
+/* Importações Externas */
+import { BrowserRouter, Route } from "react-router-dom";
+
+/* Importações Internas - Componentes */
+import { Home } from "./pages/Home";
+import { NewRoom } from "./pages/NewRoom";
+
+/* Importações Internas - Contextos */
+import { AuthContextProvider } from './contexts/AuthContext';
 
 function App() {
   return (
-    <div>
-      <Button />
-      <Button />
-    </div>
+    <BrowserRouter>
+      <AuthContextProvider>
+        <Route path="/" exact component={Home}/>
+        <Route path="/rooms/new" component={NewRoom}/>
+      </AuthContextProvider>
+    </BrowserRouter>
   );
 }
 

@@ -1,8 +1,10 @@
+/* Importações Externas */
 import firebase from 'firebase/app';
-
 import 'firebase/auth';
 import 'firebase/database';
 
+//Configuração das chaves de autenticação do Firebase
+//Ele está importando as configs através de variáveis de ambiente do arquivo .env.local na raiz do projeto
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -13,7 +15,9 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID
 };
 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig); //Inicializa o firebase através das configs feitas
 
-export const auth = firebase.auth();
-export const database = firebase.database();
+const auth = firebase.auth();
+const database = firebase.database();
+
+export { firebase, auth, database };

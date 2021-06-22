@@ -1,8 +1,14 @@
+/* Importações Externas */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 
+/* Importações Internas */
+import App from './App';
 import './services/firebase';
+
+/* Importação de Estilização */
+import './styles/global.scss';
+
 
 ReactDOM.render(
   <React.StrictMode>
