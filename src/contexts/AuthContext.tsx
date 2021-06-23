@@ -6,9 +6,9 @@ import { auth, firebase } from "../services/firebase";
 
 /* Declaração dos tipos (TYPESCRIPT) */
 type User = {
-  id: String;
-  name: String;
-  avatar: String;
+  id: string;
+  name: string;
+  avatar: string;
 }
 
 type AuthContextType = {
