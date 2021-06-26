@@ -26,6 +26,7 @@
   }
 
   main {
+    width: 90%;
     max-width: 800px;
     margin: 0 auto;
 
@@ -106,6 +107,29 @@
 
     .question-list {
       margin-top: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #page-room {
+    .content {
+      flex-direction: column;
+
+      button {
+        margin-top: 16px;
+      }
+    }
+
+    main {
+      .room-title {
+        flex-direction: column;
+        
+        span {
+          margin-left: 0;
+          margin-top: 16px;
+        }
+      }
     }
   }
 }
