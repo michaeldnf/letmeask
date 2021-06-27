@@ -66,7 +66,7 @@ export function Room() {
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImage} alt="Letmeask" />
+          <img src={logoImage} alt="Letmeask"/>
           <RoomCode code={roomId} />
         </div>
       </header>

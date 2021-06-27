@@ -1,8 +1,8 @@
 /* Importações das Estilizações */
-import '../styles/roomCode.scss';
+import './style.scss';
 
 /* Importações das Imagens */
-import copyImage from '../assets/images/copy.svg';
+import copyImage from '../../assets/images/copy.svg';
 
 /* Define o tipo da propriedade que o componente recebe */
 type RoomCodeProps = {
