@@ -106,15 +106,23 @@
     }
 
     .question-list {
-      margin-top: 32px;
+      margin: 32px 0;
     }
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 620px) {
   #page-room {
     .content {
       flex-direction: column;
+
+      > div {
+        flex-direction: column;
+
+        button {
+          margin-left: 0;
+        }
+      }
 
       button {
         margin-top: 16px;
@@ -128,6 +136,25 @@
         span {
           margin-left: 0;
           margin-top: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #page-room {
+    main {
+      form {
+        .form-footer {
+          flex-direction: column;
+  
+          .user-info { align-self: flex-start }
+          
+          button {
+            align-self: flex-end;
+            margin-top: 16px;
+          }
         }
       }
     }

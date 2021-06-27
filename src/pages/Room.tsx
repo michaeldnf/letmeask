@@ -110,7 +110,7 @@ export function Room() {
               >
                 {!question.isAnswered && (
                   <button 
-                    className={`like-button ${question.likeId && 'liked'}`} 
+                    className={`like-button ${question.likeId ? 'liked' : ''}`} 
                     type="button" 
                     aria-label="Marcar como gostei"
                     onClick={() => handleLikeQuestion(question.id, question.likeId)}

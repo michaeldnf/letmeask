@@ -80,3 +80,17 @@
     }
   }
 }
+
+@media screen and (max-width: 360px) {
+  .question:not(.answered) {
+    footer {
+      flex-direction: column;
+      margin-top: 16px;
+
+      .user-info { 
+        align-self: flex-start;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
