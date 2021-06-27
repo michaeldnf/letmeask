@@ -24,7 +24,7 @@ type RoomParams = { id: string } //Define o tipo de parâmetro que é enviado pa
 export function Room() {
   const params = useParams<RoomParams>(); //Pega os parâmetros que é passado na URL
   const roomId = params.id;
-  const { user } = useAuth();
+  const { signInWithGoogle, user } = useAuth();
   const { questions, title } = useRoom(roomId);
   const [newQuestion, setNewQuestion] = useState('');
 
@@ -62,6 +62,10 @@ export function Room() {
     return;
   }
 
+  async function handleSingInGoogle() {
+    await signInWithGoogle();
+  }
+
   return (
     <div id="page-room">
       <header>
@@ -91,7 +95,7 @@ export function Room() {
                 <span>{user.name}</span>
               </div>
             ) : (
-              <span>Para enviar uma pergunta, <button>faça seu login</button></span>
+              <span>Para enviar uma pergunta, <button type="button" onClick={handleSingInGoogle}>faça seu login</button></span>
             )}
             <Button type="submit" disabled={!user}>Enviar pergunta</Button>
           </div>
